@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Game Reviews</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: black;
+        color: #EEE;
+        margin: 0;
+        padding: 0;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        justify-items: center;
+        text-align: center;
+      }
+
+      #main-container {
+        background: #000;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 250px);
+        grid-template-rows: 250px;
+        gap: 10px;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .game-container {
+        border: 2px solid #999;
+        background: #222;
+        color: #EEE;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        padding: 0px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .game-container:hover {
+        cursor: pointer;
+        border-color: #EEE;
+      }
+
+      .game-container img {
+        width: 100%;
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <a class="game-container" href="./cyberpunk-2077/dist/index.html">
+        <h3>Cyberpunk 2077</h3>
+        <img src="./cyberpunk-2077/cover.png" alt="">
+      </a>
+      <a class="game-container" href="house-of-the-dead/house-of-the-dead.html">
+        <h3>House of the Dead Overkill</h3>
+        <img src="house-of-the-dead/cover.png" alt="">
+      </a>
+    </div>
+  </body>
+</html>
