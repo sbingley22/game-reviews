@@ -1,3 +1,5 @@
 cyberpunk-2077/*
-!cyberpunk-2077/dist/index.html
+!cyberpunk-2077/dist/
+!cyberpunk-2077/dist/**
+!cyberpunk-2077/cover.png
 
