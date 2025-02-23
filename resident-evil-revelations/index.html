@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>RE REV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: black;
+        color: red;
+      }
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        font-family: fantasy;
+      }
+
+      #main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      #text-container {
+        padding: 40px;
+        font-size: 1.0rem;
+        text-align: center;
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      @media (min-width: 768px) {
+        #main-container {
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 1fr;
+        }
+
+        #text-container {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="text-container">
+        <h1>Resident Evil Revelations</h1>
+        <p>Solid game.</p>
+        <p>Cheesy, what you'd expect story from a resident evil game that's serviceable enough.</p>
+        <p>The gameplay is good, movement and shooting feels pretty good even if the animations are a bit off. It's what you'd expect from the modern style third person RE games. Dodge system is a bit finicky.</p>
+        <p>The story has a decent length, not too short or long. There is quite a bit of replay value with raid mode and unlockable character / skins / weapons. I sank a good few hours into raid.</p>
+      </div>
+
+      <div>
+        <img id="img-1" src="gameplay (1).png" alt="">
+        <img id="img-2" src="gameplay (2).png" alt="" style="display: none;">
+      </div>
+    </div>
+
+    <script>
+      const img1 = document.getElementById('img-1')
+      const img2 = document.getElementById('img-2')
+
+      let currentImg = 1
+      const swapImg = () => {
+        if (currentImg === 1) {
+          currentImg = 2
+          img1.style.display = "none"
+          img2.style.display = "block"
+        }
+        else {
+          currentImg = 1
+          img2.style.display = "none"
+          img1.style.display = "block"
+        }
+        console.log(img1.style)
+      }
+
+      img1.addEventListener('mouseover', swapImg)
+      img2.addEventListener('mouseout', swapImg)
+
+    </script>
+  </body>
+</html>

@@ -35,14 +35,17 @@
 
       .game-container {
         border: 2px solid #999;
-        background: #222;
+        background: #111;
         color: #EEE;
         width: 100%;
         height: 100%;
         justify-items: center;
+        align-content: space-between;
         padding: 0px;
         border-radius: 10px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
       .game-container:hover {
         cursor: pointer;
@@ -54,6 +57,7 @@
         object-fit: contain;
         margin: 0;
         padding: 0;
+        flex: auto
       }
     </style>
   </head>
@@ -66,6 +70,14 @@
       <a class="game-container" href="house-of-the-dead/house-of-the-dead.html">
         <h3>House of the Dead Overkill</h3>
         <img src="house-of-the-dead/cover.png" alt="">
+      </a>
+      <a class="game-container" href="./resident-evil-revelations-2/index.html">
+        <h3>Resident Evil Revelations 2</h3>
+        <img src="./resident-evil-revelations-2/cover.png" alt="">
+      </a>
+      <a class="game-container" href="./resident-evil-revelations/index.html">
+        <h3>Resident Evil Revelations</h3>
+        <img src="./resident-evil-revelations/cover.png" alt="">
       </a>
     </div>
   </body>

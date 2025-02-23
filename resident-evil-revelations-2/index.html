@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>RE REV 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: black;
+        color: red;
+      }
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        font-family: fantasy;
+      }
+
+      #main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+      }
+
+      #text-container {
+        padding: 40px;
+        font-size: 1.0rem;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        #main-container {
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: 1fr;
+        }
+
+        #text-container {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="text-container">
+        <h1>Resident Evil Revelations 2</h1>
+        <p>Good game. I don't particularly like the swapping characters thing when playing single player but it's not a deal breaker. </p>
+        <p>The controls and gameplay are slick, the story is servicable and the riot mode is fun. I also like the setting, stuck on an island where they are doing mad experiments with the T-Virus.</p>
+        <p>The episodic formula doesn't work well for me. I like the idea of having the secondary character not being a combat focused shooty character but in practice it's a bit boring playing as them in coop.</p>
+      </div>
+
+      <div>
+        <img id="img-1" src="gameplay (1).jpg" alt="">
+        <img id="img-2" src="gameplay (2).jpg" alt="" style="display: none;">
+      </div>
+    </div>
+
+    <script>
+      const img1 = document.getElementById('img-1')
+      const img2 = document.getElementById('img-2')
+
+      let currentImg = 1
+      const swapImg = () => {
+        if (currentImg === 1) {
+          currentImg = 2
+          img1.style.display = "none"
+          img2.style.display = "block"
+        }
+        else {
+          currentImg = 1
+          img2.style.display = "none"
+          img1.style.display = "block"
+        }
+        console.log(img1.style)
+      }
+
+      img1.addEventListener('mouseover', swapImg)
+      img2.addEventListener('mouseout', swapImg)
+
+    </script>
+  </body>
+</html>
