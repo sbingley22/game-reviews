@@ -25,17 +25,20 @@
       #text-content {
         width: 100%;
         height: 100%;
+        padding: 15px;
+        text-align: center;
       }
 
       h1 {
         width: 100%;
         margin: auto;
         text-align: center;
+        border-bottom: solid 2px gold;
       }
 
       .img-carosel {
         display: grid;
-        grid-template-rows: 9fr 1fr;
+        grid-template-rows: 7fr 1fr;
       }
 
       #img-carosel-images {
@@ -55,14 +58,28 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      button {
+        background: black;
+        color: gold;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+
       @media (min-width: 768px) {
         #main-container {
           grid-template-columns: 1fr 2fr;
           grid-template-rows: 1fr;
         }
 
+        #text-content {
+          font-size: 1.6rem;
+          padding: 20px;
+          text-align: center;
+        }
+
         .img-carosel {
-          grid-template-rows: 25fr 1fr;
+          grid-template-rows: 12fr 1fr;
           background: black;
         }
       }
@@ -72,11 +89,17 @@
     <div id="main-container">
       <div id="text-content">
         <h1>God Of War</h1>
+        <p>A strong return to the series.</p>
+        <p>The God of War series was one of my all time favorites from the ps2 era but it would clearly need reinventing if it was compete with all the advancements made in gaming since.</p>
+        <p>The gameplay has changed to more Dark Souls like controls which work pretty well. It has the more uncharted like elements with climbing, set pieces, and puzzles too. The combat is still brutal, weighty, and satisfying.</p>
+        <p>The story is interesting enough to propell you forwards and the switch to Nordic Gods / Lore is a welcome move. The graphics are solid, usually I wouldn't be too bothered about graphics but the enviroments are actually quite stunning, and when you combine them with the Nordic lore it makes moving through the levels much more pleasurable.</p>
       </div>
       <div class="img-carosel">
-        <div id="img-carosel-images">
+        <div id="img-carosel-images" onclick="caroselMove(1)">
           <img src="g1.jpg" alt="">
-          <img src="cover.png" alt="" style="display: none;">
+          <img src="g2.png" alt="" style="display: none;">
+          <img src="g3.jpg" alt="" style="display: none;">
+          <img src="g4.jpg" alt="" style="display: none;">
         </div>
         <div class="img-carosel-navigation">
           <button type="button" onclick="caroselMove(-1)">&lt;</button>

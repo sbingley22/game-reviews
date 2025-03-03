@@ -112,6 +112,27 @@
         border-radius: 5px;
         border: solid 3px grey;
       }
+
+      @media (max-width: 768px) {
+        #main-container {
+          grid-template-columns: repeat(auto-fit, 100px);
+          grid-template-rows: 150px;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        .smiley::before {
+          font-size: 1rem;
+        }
+        .sad::before {
+          font-size: 1rem;
+        }
+        .neutral::before {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,6 +151,11 @@
         <img src="./cyberpunk-2077/cover.png" alt="" />
         <span class="smiley" />
       </a>
+      <a class="game-container" href="./disco-elysium/index.html">
+        <h3>Disco Elysium</h3>
+        <img src="./disco-elysium/cover.webp" alt="" />
+        <span class="smiley" />
+      </a>
       <a class="game-container" href="./elden-ring/index.html">
         <h3>Elden Ring</h3>
         <img src="./elden-ring/cover.png" alt="">
@@ -140,10 +166,20 @@
         <img src="./god-of-war/cover.png" alt="">
         <span class="smiley" />
       </a>
+      <a class="game-container" href="./hollow-body/index.html">
+        <h3>Hollow Body</h3>
+        <img src="./hollow-body/cover.png" alt="">
+        <span class="neutral" />
+      </a>
       <a class="game-container" href="house-of-the-dead/house-of-the-dead.html">
         <h3>House of the Dead Overkill</h3>
         <img src="house-of-the-dead/cover.png" alt="">
         <span class="neutral" />
+      </a>
+      <a class="game-container" href="./paradise-killer/index.html">
+        <h3>Paradise Killer</h3>
+        <img src="./paradise-killer/cover.png" alt="">
+        <span class="smiley" />
       </a>
       <a class="game-container" href="./resident-evil-revelations/index.html">
         <h3>Resident Evil Revelations</h3>
