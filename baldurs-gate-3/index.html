@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baldurs Gate 3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #113;
+        color: #AA8;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #224;
+        padding: 0 20px;
+      }
+      
+      header p {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 5px;
+        padding-left: 0;
+      }
+
+      nav a {
+        font-size: 1.3rem;
+        padding-left: 20px;
+        color: #AAB;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin: auto;
+      }
+
+      #review {
+        margin: 10px;
+        width: 100%;
+      }
+
+      #review p {
+        color: #AAB;
+        font-size: 1.6rem;
+      }
+
+      #characters {
+        height: 100vh;
+        margin: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #review h2 {
+        margin: auto;
+        width: 100%;
+      }
+
+      #characters h2 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      #characters-container {
+        height: 100%;
+        max-width: 1280px;
+        margin: auto;
+      }
+
+      #character-button-container {
+        margin: 10px 0;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+      }
+
+      #character-button-container button {
+        font-size: 1.2rem;
+        margin: 0 10px;
+        background: #224;
+        color: #DDD;
+      }
+
+      .character-container  {
+        display: none;
+        height: 100%;
+      }
+
+      .character-container.active {
+        display: flex;
+      }
+
+      .character-container .text-container {
+        color: #AAB;
+        font-size: 1.2rem;
+        margin: 20px;
+      }
+
+      .character-container img {
+        height: 100%;
+        max-width: 50%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+      .character-container p {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          width: 100vw;
+        }
+
+        header {
+          width: 100%;
+          padding: 1px;
+          font-size: 1rem;
+        }
+
+        header p {
+          font-size: 1rem;
+        }
+
+        header nav a {
+          font-size: 1rem;
+          padding-left: 2px;
+        }
+
+        h2 {
+          font-size: 1rem;
+          margin: auto;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        #review p {
+          font-size: 1rem;
+        }
+
+        .character-container p {
+          font-size: 1.0rem;
+        }
+
+        #character-button-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        #character-button-container button {
+          font-size: 1rem;
+          padding: 0;
+          margin: 2px 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Baldurs Gate 3</p>
+      <nav>
+        <a href="#review">Review</a>
+        <a href="#characters">Characters</a>
+      </nav>
+    </header>
+    <div id="review">
+      <h2>Review</h2>
+      <p>Baldur's Gate 3 is a very good game and I would recommend it.</p>
+
+      <p>The story and choices are where it shines. The characters backstories, and hurdles to overcome are all well written. The main thrust of the plot is interesting. The lore and world building is very good. Most importantly the decisions are usually morally grey and force the player to make decisions with imperfect information. Perhaps if you read all the memos, books, do all the quests you will go into these choices more informed instead of like me who played on easy mode and mostly stuck to the main quest.</p>
+      <p>I have seen complaints about the ending but I found it to be perfectly fine, good even.</p>
+
+      <p>The gameplay is good too. There are multiple diferent ways to achieve your goals in the game that require thought and the right characters with the right skills. The stealth system is good, you can use your characters charisma to talk you way out, cast the correct skill to make the obstacle go away, or just brute force it with combat.</p>
+      <p>I will say that because I generally can't be bothered to learn in depth game systems I missed out on a lot of this. I just brute forced most problems. Which brings my on to the combat. Again it's a very well done turn based xcom like system. The problem I found is I was overwhelmed with choices, spells, etc. I knew I was playing it wrong because my spell casters where pretty useless for most of the fights and I only used a handful of spells. I bet the system is really good if you learn it and take the time to learn what each spell does and how and when to use it but I just couldn't be bothered. Even with that said the system was still good and worked well.</p>
+
+      <p>The enviroments are very beautiful and varied, prefect for a fantasy game like this. If you have a SSD I'd recommend installing it on there as loading times were a bit long on my HDD.</p>
+
+      <p>Overall I did enjoy my time with this game due to its good gameplay and great story, it also has great replayability as there are so many side quests that I didn't complete, choices I would make differently, and main characters that I lost very early in the game so I know nothing about (Astarion). There is even a completely new character you can pick (the dark urge) that significantly changes parts of the story. Not forgetting various mods you could try out. This game is definitely deserving of all those game of the year awards it got.</p>
+    </div>
+    <div id="characters">
+      <h2>Characters</h2>
+      <div id="character-button-container">
+        <button type="button" onclick="selectCharacter('shadowheart')">Shadowheart</button>
+        <button type="button" onclick="selectCharacter('karlach')">Karlach</button>
+        <button type="button" onclick="selectCharacter('laezel')">Lae'zel</button>
+        <button type="button" onclick="selectCharacter('gale')">Gale</button>
+        <button type="button" onclick="selectCharacter('astarion')">Astarion</button>
+        <button type="button" onclick="selectCharacter('wyll')">Wyll</button>
+        <button type="button" onclick="selectCharacter('dark-urge')">The Dark Urge</button>
+      </div>
+      <div id="characters-container">
+        <div id="characters-shadowheart" class="character-container active">
+          <img src="shadowheart.jif" alt="">
+          <div class="text-container">
+            <p>A worshiper of the Godess of night Shar. She was saved / groomed by her from a young age and is now her loyal servant.</p>
+            <p>She holds a mysterious prism object that she must bring to baldur's gate however has had her memory tempory erased due to the secrecy of the mission.</p>
+            <p>She is very sucpicious and guarded. Has probably done several questionable things for Shar.</p>
+            <p>Shar gave her a painful scar on her hand that flairs up from time to time for reasons Shadowheart does not know.</p>
+          </div>
+        </div>
+        <div id="characters-karlach" class="character-container">
+          <img src="karlach.webp" alt="">
+          <div class="text-container">
+            <p>A slave forced to fight in the dameon wars in hell for her master. She has recently escaped.</p>
+            <p>Like the others she has a mindflayer parasite threatening to take over her mind.</p>
+            <p>An infernal engine burning away at her core. Makes it so she could burn people by touch. She needs to find an engineer to fix it up before a full meltdown occurs.</p>
+            <p>Despite all this she has a very positive, go getter attitude.</p>
+            <p>Shes a strong barbarian forged in war. Recently fought her way out of captivity but her master will find her again.</p>
+          </div>
+        </div>
+        <div id="characters-laezel" class="character-container">
+          <img src="laezel.jif" alt="">
+          <div class="text-container">
+            <p>Lae'zel believes in strength and sees her race as superiour to others. Her personality is very harsh and transactional. She is forced to be very self reliant.</p>
+            <p>She is a Githraki, a race who serve the queen and follow strict hierachy. Previously enslaved for generations via the Gaith, they are on a holy war to destroy theml</p>
+            <p>Is well read on Githraki knowledge and believes getting to her Cresh is the key to getting rid of the tadpol in her brain.</p>
+          </div>
+        </div>
+        <div id="characters-gale" class="character-container">
+          <img src="gale.jif" alt="">
+          <div class="text-container">
+            <p>A wizard fallen from grace. Now forced to consume magical objects at regular intervals to stay alive.</p>
+            <p>Very charming and ambitious personality.</p>
+            <p>Was taken on as an apprentice to the goddess Mystra at an early age thanks to his ability to spin the weave. Eventually became her lover. In order to impress her he saught a powerful artifact that was lost to her. The artifact ended up entering him causing his insatiable appitiate for magic. If he doesn't feed it, it will explode like a miniture nuke.</p>
+          </div>
+        </div>
+        <div id="characters-astarion" class="character-container">
+          <img src="astarion.jif" alt="">
+          <div class="text-container">
+            <p>A dark elf vampire that grew up on the tough streets of the city.</p>
+            <p>Untrusting, manipulative, thief whos in it for himself.</p>
+            <p>His previous master only let him feed on vermin but it appears he now wants to move to humans.</p>
+          </div>
+        </div>
+        <div id="characters-wyll" class="character-container">
+          <img src="wyll.jif" alt="">
+          <div class="text-container">
+            <p>A member of the Blade of Frontiers. Wyll is a very hounarble and kind man of his word.</p>
+            <p>He signed a pack with the devil to give him his powers. He doesn't regret the pact but has been cursed with devil markings as a result and is bound to do what his devil commands thanks to the contract.</p>
+          </div>
+        </div>
+        <div id="characters-dark-urge" class="character-container">
+          <img src="darkurge.jif" alt="">
+          <div class="text-container">
+            <p>Has an unknown amnesia backstory.</p>
+            <p>Is compelled by a dark urge to do evil things.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function selectCharacter(character) {
+        const elements = document.querySelectorAll('.character-container')
+        elements.forEach(element => element.classList.remove('active'))
+        const charContainer = document.getElementById(`characters-${character}`)
+        if (charContainer) charContainer.classList.add('active')
+      }
+    </script>
+  </body>
+</html>
