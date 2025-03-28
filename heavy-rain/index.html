@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heavy Rain</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #000;
+      }
+
+      #text-container {
+        background-color: #111;
+        color: #AAA;
+        font-size: 1.4rem;
+        padding: 10px;
+      }
+
+      #title {
+        background-image: url("./s1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 200px;
+      }
+
+      h1 {
+        color: #AAA;
+        margin-top: 0;
+        padding-top: 40px;
+        padding-left: 40px;
+        font-size: 5rem;
+      }
+
+      #img-container {
+        display: flex;
+      }
+
+      #img-container img {
+        object-fit: cover;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        #img-container {
+          flex-direction: column;
+        }
+
+        h1 {
+          padding-left: 10px;
+          padding-top: 10px;
+        }
+
+        #text-container {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="title">
+        <h1>Heavy Rain</h1>
+      </div>
+      <div id="main-content">
+        <div id="text-container">
+          <p>I wouldn't recommend unless it's really cheap and you're into this sort of thing.</p>
+          <p>It's basically a B-Movie about a serial killer with twists and plot points that seem contrived.</p>
+          <p>The story is ok but never had me hooked. It does have different outcomes depending on what you do and if you mess up the quick time events but the events seem to not effect the story much at all until the end.</p>
+          <p>The graphics are a bit dated and the animations kept messing up however I did like the atmosphere. Taking your time to walk around various scenes as different characters whilst the heavy rain pours down is quite relaxing.</p>
+          <p>The gameplay is pretty poor, its just QTEs and point and click adventure type stuff but with awkward controls. Honestly I would have prefered to have no QTEs and just watch the action scenes instead of having to focus on the button prompts and miss out on the actual scene being played. The gimic of certain control inputs to do basic actions like open a door is just that, a gimic.</p>
+          <p>This review has turned out pretty negative but it's not that bad of a game. I got it for £2 but I don't feel like it was worth the 8hrs I invested into it to reach the end. I think this game will absolutely appeal to some people though.</p>
+        </div>
+        <div id="img-container">
+          <img src="s3.jpg" alt="">
+          <img src="s2.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
