@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spiritfarer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        max-width: 1280px;
+        margin: auto;
+        font-size: 1.4rem;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(#faa, #f88);
+      }
+
+      div {
+        padding: 5px;
+      }
+
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      @media(max-width: 768px) {
+        body {
+          font-size: 1.0rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="s1.jpg" alt="">
+    <div>
+      <p>Spiritfarer is described as a cozy managment sim about dying and it's exactly that.</p>
+
+      <p>The main gameplay loop involves collecting, farming, smithing, and knitting resources to satisfy the various spirits you encouter on you journey through the many mini islands of the spiritfarer world. You select a location for your ship to go, and with no real fast travel, you spend your time farming or interacting with the spirits on your ship. When you reach your island it becomes a very forgiving platformer / explorer game where you gather resources, talk to spirits, and complete tasks.</p>
+
+      <p>The gameplay loop is quite satisfying in that you are doing a variety of easy to learn yet satisfying tasks whilst managing the many pies you have in the oven (literally). The gameplay is super forgiving and relaxing. My only real gripe is that it feels a bit to grindy but I'm even conflicted saying that as the more time you spend in game with the various spirits, the more bonds you build with them, giving a much greater emotional impact when you have to let them go.</p>
+
+      <p>That is the clever thing about this game. It makes you build bonds with the characters not just through dialog, theres actually not very much dialog, but through familiarity, them helping you out with various tasks on the ship, there unique personalities and tastes, and the cute animations they have.</p>
+
+      <p>Another great choice is the pretty, colorful, animation, style the game has. It almost feels like a studio Ghibli game. It's a great justaposition to the main theme of the game, dying. It frames it in a way thats more uplifting and in a way that helps you frame death in a more positive mindset if that makes any sense.</p>
+
+      <p>I really enjoyed this game. My only real gripe is the 25hrs+ playtime to completion feels wrong however I fully understand that it's almost nessecary to build connection to the characters and make you really feel the impact and think on the cycle of life and death.</p>
+    </div>
+    <button type="button" onclick="showSpoiler()">SPOILERS</button>
+    <div id="spoiler-container" style="display: none;">
+      <p>The game is about a palative care nurse who is now in the final stages of dying of cancer herself. It is about her coming to terms with her death by reliving events of her life and in particular, how she fared many of her patients from this life.</p>
+      <p>In real life shes probably around 30 years old and is unconcious laying in a hospital bed with her mother and sister by her side. So the game takes place in her imagination where she is a young, energitic, happy, girl and the spirits take the form of various cute animals that represent their real life personalities.</p>
+      <p>All the spirits are people she knows in real life, family members, patients, friends, who have passed. They slowly reveal their real life stories in the game as you interact with them.</p>
+      <p>Gwen is the first spirit you meet who teaches you the basics of spiritfaring. In real life she was a child hood friend who was treated like a sister as your family stayed with them in paris for a while. She had some ill will to her father which led to her smoking and eventually the lung cancer that killed her. She spends her time reminicing on her childhood memories with Stella, the main character, and somewhat forgiving / understanding her parents before she is ready to move on.</p>
+      <p>Summer is a relative of Stella, represented as a snake. She worked in some toxic industry which destroyed nature and her own health giving her cancer. She then switched her life around to healing, meditation, being one with nature, veganism, and gardening. She tried all this to keep the "dragon" of cancer away and whilst it might have helped in that regard, as well as help her spiritually, the cancer gets her in the end.</p>
+      <p>Atul is the uncle of Stella, who was always Jolly, and helping people out. He is represented as the toad. His personality in game is like his personality in real life. Hes always helping you out around the ship, isn't fussed about what food you give him, and is always happy and up beat apart from those rare moments he opens up to reveal he is depressed about certain things. Unlike the other spirits where you get to say your proper good byes as you faery them to the everdoor, with Atul he arranges a big banquet like he used to in the real world, where all his family members where fed well and had a good time. Then he's gone. It's implied that in real life he quitely went off and commited suicide.</p>
+      <p>There are many other spirits you can faer like these, each with there own unique personalities, backstories, and views on life and death. When you have faered around 8 spirits you get the objective to faer yourself to the everdoor. You can either do this straight away or you can keep helping the other spirits and chipping away at your task whilst it looms over you. Your sister at this point appears in spirit form and lets you know shes there with you in real life and reminices about old times as you lay unconcious on the hospital bed. This spirit isn't like the others as it hasn't died, its just there to hug and comfort you and help ferry you other through the everdoor.</p>
+      <p>There is no specific viewpoint on death this game is pushing you towards. Just showing you how various characters cope with it and how life carries on. You return to stardust and the memories, art, and impacts you had on people are left behind.</p>
+    </div>
+    <img src="s0.png" alt="">
+  </body>
+  <script>
+    function showSpoiler() {
+      const sc = document.getElementById('spoiler-container')
+      if (sc.style.display === "none") sc.style.display = "block"
+      else sc.style.display = "none"
+    }
+  </script>
+</html>
