@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Melatonin</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 1.4rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        max-width: 1280px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: #999;
+      }
+
+      img {
+        object-fit: contain;
+        max-width: 100%;
+      }
+
+      #main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+      }
+
+      #review {
+        margin: 10px;
+      }
+
+      #game {
+        height: 100%;
+        height: 800px;
+        position: relative;
+      }
+
+      #game img {
+        height: 100%;
+        position: absolute;
+      }
+
+      #coin {
+        position: absolute;
+        left: 35%;
+        top: -50%;
+        width: 100px;
+        height: 100px;
+        z-index: 10;
+      }
+
+      @media(max-width: 768px) {
+        body {
+          font-size: 1rem;
+        }
+
+        #main-container {
+          grid-template-columns: 1fr;
+        }
+
+        #game {
+          width: 100%;
+          height: 800px;
+          position: relative;
+        }
+
+        #game img {
+          width: 100%;
+          height: auto;
+        }
+
+        #coin {
+          width: 100px !important;
+          height: 100px !important;
+          position: absolute !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="s1.png" alt="">
+    <div id="main-container">
+      <div id="review">
+        <p>I like the idea of Melatonin. It's supposed to be a relaxing rythm based game to help you clear your mind and wind down to sleep. It has a bunch of mini games where you must use sound and visual ques to press buttons to a rhythm.</p>
+
+        <p>Instead of finding it relaxing I found it mostly frustrating. Which is the opposite effect I bought this game for. Even setting a bunch of modifiers to make it easier I still struggled to notice what I was doing wrong and understand the timing of things. Maybe I just have no sense of rythm. I struggled to know when went to start my inputs and since the patterns you are copying are rythm based, once you miss the first one you are garaunteed to miss the next.</p>
+
+        <p>I think this game could do with a very easy mode. I did use the sound que and easy perfects assist however I avoided the visuals telling you exactly when to press as that defeats the point of the game. I could see this being quite relaxing if these issues were cleared up or if you are just better at the game.</p>
+
+        <p>[To play the mini game, simply click the meditating man when the coin is in the yellow oura.]</p>
+      </div>
+      <div id="game" onclick="tryGrab()">
+        <img src="./coin.png" id="coin">
+        <img src="./idle.png" id="idle">
+        <img src="./grab.png" id="grab" style="display: none;">
+        <img src="./miss.png" id="miss" style="display: none;">
+      </div>
+    </div>
+
+    <script>
+      const game = document.getElementById('game')
+      const idle = document.getElementById('idle')
+      const grab = document.getElementById('grab')
+      const miss = document.getElementById('miss')
+      const coin = document.getElementById('coin')
+      const isMobile = window.innerWidth <= 768
+      const basePosition = isMobile ? -10 : -50
+      let yPos = basePosition
+
+      function tryGrab() {
+        if (idle.style.display === 'none') return
+        idle.style.display = 'none'
+
+        if (!isMobile) {
+          if (yPos >= -30) grab.style.display = 'inline'
+          else miss.style.display = 'inline'
+        }
+        else {
+          if (yPos >= 4) grab.style.display = 'inline'
+          else miss.style.display = 'inline'
+        }
+
+        yPos = basePosition
+
+        setTimeout(()=>{
+          idle.style.display = 'inline'
+          miss.style.display = 'none'
+          grab.style.display = 'none'
+        }, 450)
+      }
+
+      function moveCoin() {
+        yPos += isMobile ? 2 : 4
+        if (!isMobile && yPos >= -28) yPos = basePosition
+        else if (yPos >= 6) yPos = basePosition
+        coin.style.top = yPos + "%"
+        setTimeout(moveCoin, 250)
+      }
+      moveCoin()
+    </script>
+  </body>
+</html>
