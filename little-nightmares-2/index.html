@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Little Nightmares II</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #123;
+        background: url("./s3.webp");
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        background-repeat: space;
+        background-repeat: round;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100%;
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+      }
+      #main-container {
+        max-width: 1220px;
+        margin: auto;
+        color: #Ffe;
+        font-size: 1.4rem;
+      }
+      p {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 0%;
+        padding: 10px;
+        margin: 0;
+      }
+      #final-img {
+        margin-top: 175px;
+        margin-top: 0;
+        /*min-height: 1020px;*/
+      }
+      #img-pull {
+        display: none;
+      }
+      #img-hold {
+        display: none;
+        display: inline-block;
+      }
+
+      @media(max-width: 768px) {
+        #main-container {
+          font-size: 1.0rem;
+        }
+        #final-img {
+          display: inline-block;
+          margin-top: 0;
+          min-height: auto;
+        }
+        #img-pull {
+          display: inline-block;
+        }
+        #img-hold {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <img src="s1.png" alt="">
+      <p>Little Nightmares 2 is a short, interesting, and atmospheric puzzle horror game.
+
+      <p>You play as a kind of shrunken down child in a large scary adult nightmare world. You and your ai partner travel through various horror setting (hospital, boarding school, cabin in the woods, etc) as you try to escape the many horrors trying to kill you.</p>
+
+      <p>The controls are very simple and the gameplay makes good use of them to create puzzles that are just right for me. Not too hard but do require you to think and experiment a little bit. Some sections I did get a little stuck on but never for long enough for it to become a problem. There was however quite a few frustrating moments where my character would get stuck on something as I tried to run away forcing me to replay the section.</p>
+
+      <p>The atmosphere is great in this game. The sound of the rain, the detailed and varied environments, the cloth and object physics really help to immerse you. I'm not usually too bothered about graphics but I think the graphics for this game were really good and add a lot to the style and immersion of the game. Sometimes I'd stop and just watch the rain fall, or slowly walk through an environment instead of sprinting everywhere like in most games.</p>
+
+      <p>The story is interesting and I guess one that you need to decide in your own mind whats going on. I didn't play the first one so maybe that explains a little more but something tells me it wouldn't. Theres no real dialog, the story is told through the experiences of the 2 main characters and the animations and events. Whilst I didn't really come away with a concrete understanding of what happened I have a vague idea in my head what it might be about and I'm perfectly happy with that.</p>
+
+      <p>It took me 4 hours to complete and only cost around £2.50 so at that price it is well worth it. It definitely has me interested in playing the first one now. Just going to wait for it to go down in price first.</p>
+
+      <div id="final-img" onclick="swapImg(true)" onmouseout="swapImg(false)">
+        <img id="img-run" src="./s4.jpg" alt="">
+        <img id="img-pull" src="./s2.avif" alt="">
+      </div>
+
+      <img id="img-hold" src="./s3.webp" alt="">
+
+    </div>
+
+    <script>
+      const imgRun = document.getElementById('img-run')
+      const imgPull = document.getElementById('img-pull')
+
+      function swapImg(hovering) {
+        return
+        if (hovering) {
+          imgRun.style.display = 'none'
+          imgPull.style.display = 'block'
+        }
+        else {
+          imgRun.style.display = 'block'
+          imgPull.style.display = 'none'
+        }
+      }
+    </script>
+  </body>
+</html>
